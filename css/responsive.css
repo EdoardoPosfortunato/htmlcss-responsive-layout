@@ -1,8 +1,6 @@
 /* Soluzione qui */
 
 
-
-
 /* **Modalità Tablet** (sopra i 768px)
 - Il logo nell'header si allinea a sinistra
 - Il padding del contenuto principale della pagina aumenta
@@ -103,11 +101,14 @@
 
     .recipe-card{
         display: flex;
+        max-height: 530px;
 
-       .recipe-video{
+       .recipe-video {
         position: relative;
         width: 70%;
-        /* height: 22vw; */
+        height: inherit;
+        overflow: hidden;
+        
        }
 
         .recipe-info{
@@ -115,13 +116,12 @@
         }
 
         .recipe-video iframe{
-            position: absolute;
-            top: 0;
-            left: 0;
             aspect-ratio: 3/1;
-            /* display: block; */
-            height: 100%;
             width: 100%;
+            zoom: inherit;
+            overflow: hidden;
+    
+
         }
 
         .quick-notes ul {
@@ -159,3 +159,9 @@
         }
     }
 }
+
+
+
+
+/* - l'immagine nella descrizione della ricetta viene circondata dal testo anche su mobile ma solo se c'è spazio sufficiente, quindi a partire da 576px
+- I bottoni social si allagano già su dispositivi mobile più grandetti (576px) */
